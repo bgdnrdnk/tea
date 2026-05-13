@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@theme {
+  --font-display: 'Manrope', sans-serif;
+  --font-sans: 'Manrope', sans-serif;
+  --color-ivory: #fffaf0;
+}
+
+:root {
+  --ink: #1a3629;
+  --ivory: #fffaf0;
+  --sage: #667a45;
+  --amber: #d89b35;
+  --step--1: 0.6667rem;
+  --step-0: 1rem;
+  --step-1: 1.5rem;
+  --step-2: 2.25rem;
+  --step-3: 3.375rem;
+  --step-4: 5.0625rem;
+  color: var(--ink);
+  background:
+    linear-gradient(rgb(255 250 240 / 88%), rgb(255 250 240 / 94%)),
+    url('/tea/images/botanical-texture.png');
+  background-size: cover;
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+img {
+  display: block;
+}
+
+::selection {
+  background: rgb(216 155 53 / 34%);
+}
