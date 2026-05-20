@@ -1,0 +1,46 @@
+/* Apple design — SF Pro on Apple platforms, graceful fallback elsewhere. */
+.design-apple {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display',
+    'SF Pro Text', system-ui, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Retint the shared Radix widgets (slider / progress / tabs) to the
+   single Apple Action Blue accent — scoped so other designs are untouched. */
+.design-apple [data-slot='slider'] > span:first-child > span {
+  background-color: #0066cc;
+}
+
+.design-apple [data-slot='slider'] > span:last-child {
+  background-color: #0066cc;
+}
+
+.design-apple [data-slot='progress'] > * {
+  background-color: #0066cc;
+}
+
+.design-apple [data-slot='tabs-trigger'][data-state='active'] {
+  background-color: #0066cc;
+  color: #ffffff;
+}
+
+/* Scroll reveal — each tile's content fades and rises as it enters view. */
+.design-apple .apple-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.design-apple .apple-reveal.is-shown {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .design-apple .apple-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

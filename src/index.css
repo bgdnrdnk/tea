@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+/* Manrope is loaded via <link> in index.html to avoid a render-blocking @import. */
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
@@ -6,6 +6,36 @@
   --font-display: 'Manrope', sans-serif;
   --font-sans: 'Manrope', sans-serif;
   --color-ivory: #fffaf0;
+
+  /* The Tea Atelier — Stitch design-system tokens (used by the boutique design) */
+  --color-background: #fef9ef;
+  --color-on-background: #1d1c16;
+  --color-warm-ivory: #fffaf0;
+  --color-porcelain: #ffffff;
+  --color-atelier-ink: #1a3629;
+  --color-teahouse-green: #006241;
+  --color-glowing-amber: #d89b35;
+  --color-luminous-sage: #667a45;
+  --color-secondary: #146b4a;
+  --color-hibiscus-ruby: #b13e4a;
+  --color-on-surface-variant: #424844;
+  --color-surface-variant: #e7e2d8;
+  --color-surface-container: #f2ede4;
+  --color-surface-container-low: #f8f3e9;
+  --color-surface-container-high: #ece8de;
+  --color-primary-fixed-dim: #aecebb;
+  --color-on-tertiary-container: #c88d28;
+
+  --shadow-soft: 0 1px 2px rgb(0 0 0 / 4%), 0 14px 30px rgb(26 54 41 / 6%);
+  --shadow-lift: 0 1px 2px rgb(0 0 0 / 6%), 0 20px 42px rgb(26 54 41 / 10%);
+
+  /* Apple design tokens */
+  --color-apple-blue: #0066cc;
+  --color-apple-sky: #2997ff;
+  --color-apple-ink: #1d1d1f;
+  --color-apple-parchment: #f5f5f7;
+  --color-apple-tile: #272729;
+  --color-apple-hairline: #e0e0e0;
 }
 
 :root {
@@ -22,7 +52,7 @@
   color: var(--ink);
   background:
     linear-gradient(rgb(255 250 240 / 88%), rgb(255 250 240 / 94%)),
-    url('/tea/images/botanical-texture.png');
+    url('/tea/images/botanical-texture.webp');
   background-size: cover;
   font-family: 'Manrope', sans-serif;
   font-size: 16px;
@@ -58,4 +88,15 @@ img {
 
 ::selection {
   background: rgb(216 155 53 / 34%);
+}
+
+@keyframes atelier-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-9px);
+  }
 }

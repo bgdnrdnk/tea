@@ -1,4 +1,4 @@
-main {
+.design-classic {
   min-height: 100vh;
   overflow: hidden;
 }
@@ -630,18 +630,18 @@ main {
   background: rgb(255 255 255 / 40%);
 }
 
-details {
+.design-classic details {
   border-bottom: 1px solid rgb(26 54 41 / 12%);
   padding: 18px 0;
 }
 
-summary {
+.design-classic summary {
   cursor: pointer;
   color: var(--ink);
   font-weight: 900;
 }
 
-details p {
+.design-classic details p {
   margin-top: 12px;
   color: rgb(26 54 41 / 64%);
   line-height: 1.7;
@@ -827,4 +827,10 @@ details p {
     align-items: flex-start;
     flex-direction: column;
   }
+}
+
+/* Active blend-studio tab — amber, to match the Custom design's buttons. */
+.design-classic [data-slot='tabs-trigger'][data-state='active'] {
+  background-color: var(--color-amber-500);
+  color: var(--color-emerald-950);
 }
